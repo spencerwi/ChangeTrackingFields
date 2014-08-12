@@ -1,4 +1,4 @@
-package com.spencerwi.changetrackingfield;
+package com.spencerwi.changetrackingfields;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

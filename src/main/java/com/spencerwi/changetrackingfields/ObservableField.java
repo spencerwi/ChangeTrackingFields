@@ -1,4 +1,4 @@
-package com.spencerwi.changetrackingfield;
+package com.spencerwi.changetrackingfields;
 
 import java.util.ArrayList;
 import java.util.List;

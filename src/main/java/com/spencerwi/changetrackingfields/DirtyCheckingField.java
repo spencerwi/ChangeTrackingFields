@@ -1,4 +1,4 @@
-package com.spencerwi.changetrackingfield;
+package com.spencerwi.changetrackingfields;
 
 public class DirtyCheckingField<T> {
     protected T currentValue;

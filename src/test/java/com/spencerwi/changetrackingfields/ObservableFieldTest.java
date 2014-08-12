@@ -1,4 +1,4 @@
-package com.spencerwi.changetrackingfield;
+package com.spencerwi.changetrackingfields;
 
 import org.junit.Before;
 import org.junit.Test;
