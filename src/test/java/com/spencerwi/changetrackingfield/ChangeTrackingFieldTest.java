@@ -10,7 +10,6 @@ import static java.util.Collections.emptyList;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.isA;
 
 public class ChangeTrackingFieldTest {
 
@@ -21,7 +20,6 @@ public class ChangeTrackingFieldTest {
         Integer initialValue = 4;
         sut = new ChangeTrackingField<>(initialValue);
         
-        assertThat(sut, isA(ChangeTrackingField.class));
         assertThat(sut.getCurrentValue(), is(initialValue));
     }
 

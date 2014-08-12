@@ -4,7 +4,6 @@ package com.spencerwi.changetrackingfield;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.Matchers.isA;
 import static org.junit.Assert.assertThat;
 
 public class DirtyCheckingFieldTest {
@@ -16,7 +15,6 @@ public class DirtyCheckingFieldTest {
         int initialValue = 4;
         sut = new DirtyCheckingField<>(initialValue);
 
-        assertThat(sut, isA(DirtyCheckingField.class));
         assertThat(sut.getCurrentValue(), is(initialValue));
     }
 
