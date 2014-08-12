@@ -1,6 +1,8 @@
 ChangeTrackingFields
 ====================
 
+[![Build Status](https://travis-ci.org/spencerwi/ChangeTrackingFields.svg?branch=master)](https://travis-ci.org/spencerwi/ChangeTrackingFields)
+
 A set of container "field" classes that are aware of changes and respond in varying ways
 
 Class Hierarchy
