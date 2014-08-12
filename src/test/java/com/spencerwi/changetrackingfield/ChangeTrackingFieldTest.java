@@ -56,14 +56,14 @@ public class ChangeTrackingFieldTest {
         sut.update(6);
         LocalDateTime afterSecondChange = LocalDateTime.now();
 
-        List<Change<Integer>> changes = sut.getChanges();
+        List<ChangeTrackingField.Change<Integer>> changes = sut.getChanges();
         assertThat(changes, hasSize(2));
 
-        Change<Integer> firstChange = changes.get(0);
+        ChangeTrackingField.Change<Integer> firstChange = changes.get(0);
         assertThat(firstChange.getValue(), is(5));
         assertThat(firstChange.getTimestamp(), is(between(beforeFirstChange, afterFirstChange)));
 
-        Change<Integer> secondChange = changes.get(1);
+        ChangeTrackingField.Change<Integer> secondChange = changes.get(1);
         assertThat(secondChange.getValue(), is(6));
         assertThat(secondChange.getTimestamp(), is(between(afterFirstChange, afterSecondChange)));
     }
