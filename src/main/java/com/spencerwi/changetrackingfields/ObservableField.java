@@ -17,7 +17,7 @@ public class ObservableField<T> {
         onUpdateCallbacks.forEach(callback -> callback.accept(newValue));
     }
 
-    public void onUpdate(Consumer<T> callback){
-        this.onUpdateCallbacks.add(callback);
-    }
+    public void onUpdate(Consumer<T> callback){ this.onUpdateCallbacks.add(callback); }
+
+    public void unregister(Consumer<T> callback){ this.onUpdateCallbacks.remove(callback); }
 }

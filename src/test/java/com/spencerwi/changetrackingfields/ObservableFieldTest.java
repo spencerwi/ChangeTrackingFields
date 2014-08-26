@@ -9,6 +9,7 @@ import org.mockito.MockitoAnnotations;
 import java.util.function.Consumer;
 
 import static java.util.Collections.emptyList;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.core.Is.is;
@@ -61,5 +62,17 @@ public class ObservableFieldTest {
         sut.update(newValue);
 
         verify(callback).accept(newValue);
+    }
+    
+    @Test
+    public void canUnregisterACallback(){
+        sut = new ObservableField<>(4);
+        Consumer<Integer> callback = (value -> System.out.println(value));
+        sut.onUpdate(callback);
+        assertThat(sut.onUpdateCallbacks, contains(callback));
+
+        sut.unregister(callback);
+        
+        assertThat(sut.onUpdateCallbacks, not(contains(callback)));
     }
 }

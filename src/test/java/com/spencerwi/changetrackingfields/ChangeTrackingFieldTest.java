@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static com.spencerwi.hamcrestJDK8Time.localdatetime.IsBetweenLocalDateTime.between;
+import static com.spencerwi.hamcrestJDK8Time.matchers.IsBetween.between;
 import static java.util.Collections.emptyList;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
